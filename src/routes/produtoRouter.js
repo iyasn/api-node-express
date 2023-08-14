@@ -2,19 +2,19 @@ import express from 'express'
 
 const router = express.Router()
 
-api.get('/produto', (req, res) => {
+router.get('/', (req, res) => {
     res.json({message: "Get produto"})
 })
 
-api.post('/produto', (req, res) => {
+router.post('/', (req, res) => {
     res.json({message: "metodo post"})
 })
 
-api.put('/produto', (req, res) => {
+router.put('/', (req, res) => {
     res.json({message: "metodo put"})
 })
 
-api.delete('/produto', (req, res) => {
+router.delete('/', (req, res) => {
     res.json({message: "metodo delete"})
 })
 

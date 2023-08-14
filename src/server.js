@@ -1,5 +1,7 @@
 import express from 'express'
 import userRouter from './routes/userRouter.js'
+import produtoRouter from './routes/produtoRouter.js'
+
 
 const api = express()
 
@@ -9,6 +11,7 @@ api.get('/', (req, res) => {
 })
 
 api.use('/user', userRouter)
+api.use('/produto', produtoRouter)
 
 //faz o servidor rodar
 api.listen(3000, () => {
