@@ -1,10 +1,9 @@
 import express from 'express'
+import getProduto from '../controllers/produto/getProduto'
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-    res.json({message: "Get produto"})
-})
+router.get('/', getProduto)
 
 router.post('/', (req, res) => {
     res.json({message: "metodo post"})
